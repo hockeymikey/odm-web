@@ -1,5 +1,7 @@
 <?php
 
+if(count(get_included_files()) ==1) exit("Direkter Zugriff ist nicht erlaubt.<br>No direct access!");
+
 	$con = null;
 
 	function dbconnect() {
@@ -115,7 +117,7 @@
 	function getUserRecord($username) {
 		global $con;
 		$matchrow = null;
-		$sql = "select user_id, hash, token from users where username = ?";
+		$sql = "select user_id, username, email, hash, activation, token from users where username = ?";
 		$stmt = $con->prepare($sql);
 		$stmt->execute(array($username));
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -125,6 +127,21 @@
 		return $matchrow;
 	}
 
+	// email exists?
+	function getEmailRecord($email) {
+		//var_dump(ini_set('display_errors', 1));  
+		global $con;
+		$matchemailrow = null;
+		$sqlemail = "select user_id, username, email, hash, activation, token from users where email = ?";
+		$stmtemail = $con->prepare($sqlemail);
+		$stmtemail->execute(array($email));
+		$rowsemail = $stmtemail->fetchAll(PDO::FETCH_ASSOC);
+		foreach ($rowsemail as $rowemail) {
+			$matchemailrow = $rowemail;
+		}
+		return $matchemailrow;
+	}
+
 	function updatePassword($username, $hash) {
 		global $con;
 		$token = generateRandomString();
@@ -132,8 +149,17 @@
 		$stmt->execute(array($hash, $token, $username));
 		return $token;
 	}
+	
+	// update activation
+	function updateActivation($email, $key) {
+	//var_dump(ini_set('display_errors', 1)); 
+		global $con;
+		$stmt = $con->prepare("update users set activation = NULL where email = '".$email."' AND activation = '".$key."' LIMIT 1");
+		$stmt->execute();
+		if( $stmt ) return "success";
+	}
  
-	function storeUsername($username, $hash) {
+	function storeUsername($username, $email, $hash, $activation) {
 		global $con;
 		$stmt = $con->prepare("select * from users where username = ?");
 		$stmt->execute(array($username));
@@ -145,8 +171,8 @@
 			}
 		} else {
 			$token = generateRandomString();
-			$stmt = $con->prepare("INSERT INTO users(username, hash, token, created_at) VALUES(?, ?, ?, NOW())");
-			$stmt->execute(array($username, $hash, $token));
+			$stmt = $con->prepare("INSERT INTO users(username, email, hash, activation, token, created_at) VALUES(?, ?, ?, ?, ?, NOW())");
+			$stmt->execute(array($username, $email, $hash, $activation, $token));
 		}
 		return $token;
 	}

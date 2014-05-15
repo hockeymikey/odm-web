@@ -1,5 +1,13 @@
-		<script type="text/javascript">
-			var iframe_src = "https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+States&amp;aq=0&amp;oq=unit&amp;sll=34.233137,-102.410749&amp;sspn=0.03172,0.066047&amp;t=m&amp;g=earth&amp;ie=UTF8&amp;hq=&amp;hnear=United+States&amp;ll=37.09024,-95.712891&amp;spn=119.474667,270.527344&amp;z=3&amp;output=embed";
-		</script>
+		<!--footer-->
+		<div style="width:100%; height:100px; margin: 0 auto;">
+		   &nbsp;
+		</div>
+
+		<div style="width:100%; height:80px; overflow:hidden; margin: 0 auto; background-color:#333; margin-top:-80px; position:fixed; bottom:0px; margin-top:40px; z-index:1003;">
+			<div style="width:750px; height:80px; margin: 0 auto;">
+				<p style="text-align:center; color:#FFF; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size:x-small"> Template design by <a href="http://www.linewalker.de">Linewalker</a>, based on a template idea by <a href="http://www.techgyo.com">TechGyo</a>. </p>
+				<p style="text-align:center; color:#CCC; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size:x-small"> Open Device Manager home: <a href="http://nowsci.com/odm">http://nowsci.com/odm</a>. </p>
+			</div>
+		</div>
 	</body>
 </html>
