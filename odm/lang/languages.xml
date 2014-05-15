@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+	<translation id="title">
+		<en>Hello there, how are you?</en>
+		<de>Ciao, come stai?</de>
+	</translation>
+	<translation id="lng">
+		<en>Language:</en>
+		<de>Sprache:</de>
+	</translation>
+	<translation id="txtlogin">
+		<en>Log In</en>
+		<de>Anmeldung</de>
+	</translation>
+	<translation id="txtcam">
+		<en>Camera</en>
+		<de>Kamera</de>
+	</translation>
+	<translation id="txtmsg">
+		<en>Messages</en>
+		<de>Nachrichten</de>
+	</translation>
+	<translation id="txtfex">
+		<en>FileExplorer</en>
+		<de>FileExplorer</de>
+	</translation>
+	<translation id="txtfdr">
+		<en>Finder</en>
+		<de>Finden</de>
+	</translation>
+	<translation id="txtrec">
+		<en>Voice-Recorder</en>
+		<de>Sprach-Aufnahme</de>
+	</translation>
+	<translation id="txtcom">
+		<en>Terminal</en>
+		<de>Terminal</de>
+	</translation>
+	<translation id="txtsec">
+		<en>Security</en>
+		<de>Sicherheit</de>
+	</translation>
+	<translation id="txtopt">
+		<en>Options</en>
+		<de>Optionen</de>
+	</translation>
+	<translation id="txtdevinfo">
+		<en>Device Informations</en>
+		<de>Geräteinformationen</de>
+	</translation>
+	<translation id="txtforgot">
+		<en>Need an account?</en>
+		<de>Account benötigt?</de>
+	</translation>
+	<translation id="txtregister">
+		<en>Register</en>
+		<de>Registrieren</de>
+	</translation>
+	<translation id="txtlog">
+		<en>Log Entries</en>
+		<de>Log-Einträge</de>
+	</translation>
+	<translation id="txtphone">
+		<en>Phone:</en>
+		<de>Telefon:</de>
+	</translation>
+	<translation id="txtphne">
+		<en>Registered:</en>
+		<de>Registriert:</de>
+	</translation>
+	<translation id="txtlgout">
+		<en>Log out | </en>
+		<de>Abmelden | </de>
+	</translation>
+	<translation id="txtchpwd">
+		<en>Change password | </en>
+		<de>Kennwort ändern | </de>
+	</translation>
+	<translation id="txtregister">
+		<en>Register</en>
+		<de>Registrieren</de>
+	</translation>
+</translations>

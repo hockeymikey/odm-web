@@ -1,4 +1,5 @@
 <?php
+
 	include 'include/config.php';
 	include 'include/db.php';
 	dbconnect();
@@ -7,7 +8,7 @@
 	include 'include/checklogin.php';
 
 	$no_of_users = 0;
-	$users = getAllUsers($_COOKIE['user_id']);
+	$users = getAllUsers($_SESSION['user_id']);
 	foreach ($users as $row) {
 		$no_of_users++;
 	}
@@ -88,6 +89,9 @@
 						<div class="command-list" onclick="sendShellCmd('<?php echo $first_gcm_regid; ?>')">Send shell command</div>
 						<div class="command-list" onclick="sendFileRequest('<?php echo $first_gcm_regid; ?>')">Request file from device</div>
 						<div class="command-list" onclick="sendFileDownload('<?php echo $first_gcm_regid; ?>')">Download file to device</div>
+						<!-- File Explorer Beginn, Ralf Bobek, 02.05.2014 - 17:22 -->
+						<div class="command-list" onclick="openDeviceExplorer('<?php echo $first_gcm_regid; ?>', 'main')">FileEX Device Explorer</div>
+						<!-- File Explorer End, Ralf Bobek, 02.05.2014 - 17:22 -->
 						<div class="command-list" onclick="deleteDevice(<?php echo $first_id; ?>)">Delete this device</div>
 					</div>
 				</div>
